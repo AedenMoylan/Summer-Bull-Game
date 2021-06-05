@@ -1,0 +1,8 @@
+C:\Users\C00249220\Desktop\SFMLGAME12\Debug\SFMLGAME12.exe
+C:\Users\C00249220\Desktop\SFMLGAME12\Debug\SFMLGAME12.pdb
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\SFMLGAME12\Debug\SFMLGAME12.exe
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\SFMLGAME12\Debug\SFMLGAME12.pdb
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\SFMLGAME12 - Copy\Debug\SFMLGAME12.exe
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\SFMLGAME12 - Copy\Debug\SFMLGAME12.pdb
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Debug\SFMLGAME12.exe
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Debug\SFMLGAME12.pdb
