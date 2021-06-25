@@ -11,6 +11,7 @@ void Player::init()
 	m_playerSprite.setTexture(m_playerTexture);
 
 	m_playerSprite.setScale(0.15, 0.15);
+	m_playerSprite.setOrigin(m_playerSprite.getGlobalBounds().width / 2, m_playerSprite.getGlobalBounds().height / 2);
 	m_playerPosition = sf::Vector2f(500, 450);
 
 	m_playerSprite.setPosition(m_playerPosition);
@@ -27,6 +28,10 @@ void Player::jump()
 {
 	verticalSpeed = -20;
 
+	isPlayerGrounded = false;
+
+	m_playerPosition.y = m_playerPosition.y - 10;
+
 	isPlayerJumping = true;
 }
 
@@ -34,12 +39,9 @@ void Player::detectInput()
 {
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
 	{
-		isPlayerGrounded = false;
 		if (isPlayerJumping == false)
-		{
-			m_playerPosition.y = m_playerPosition.y - 10;
-			jump();
-			
+		{		
+			jump();		
 		}
 	}
 }
@@ -47,27 +49,45 @@ void Player::detectInput()
 void Player::update()
 {
 	detectInput();
-	detectGround();
 	if (isPlayerGrounded == false)
 	{
 	    applyGravity();
+    	m_playerSprite.setPosition(m_playerPosition);
 	}
-
-	m_playerSprite.setPosition(m_playerPosition);
 }
 
 void Player::applyGravity()
 {
-
+	verticalSpeed += 1;
 	m_playerPosition.y += verticalSpeed;
-	verticalSpeed += 1.0;
 }
 
 void Player::detectGround()
 {
-	if (m_playerPosition.y >= 460)
-	{
 		isPlayerGrounded = true;
 		isPlayerJumping = false;
+		verticalSpeed = 0;
+}
+
+void Player::playerIsNotTouchingPlatform()
+{
+	isPlayerGrounded = false;
+}
+
+sf::Sprite Player::getPlayerSprite()
+{
+	return m_playerSprite;
+}
+
+bool Player::detectIfPlayerIsRising()
+{
+	if (verticalSpeed < 0)
+	{
+		isPlayerRising = true;
 	}
+	else
+	{
+		isPlayerRising = false;
+	}
+	return isPlayerRising;
 }

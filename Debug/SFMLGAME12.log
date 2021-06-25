@@ -1,4 +1,8 @@
-﻿  Player.cpp
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Player.cpp(13,36): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Player.cpp(6,62): warning C4390: ';': empty controlled statement found; is this the intent?
-  SFMLGAME12.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Debug\SFMLGAME12.exe
+﻿  Game.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Game.cpp(20,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Player.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Player.cpp(13,36): warning C4305: 'argument': truncation from 'double' to 'float'
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Player.cpp(6,62): warning C4390: ';': empty controlled statement found; is this the intent?
+  main.cpp
+  Generating Code...
+  SFMLGAME12.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Debug\SFMLGAME12.exe
