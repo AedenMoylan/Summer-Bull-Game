@@ -49,6 +49,13 @@ public:
 	/// <returns></returns>
 	bool detectIfPlayerIsRising();
 
+	/// <summary>
+	/// returns platformCollisionRectangle
+	/// </summary>
+	/// <returns></returns>
+	sf::RectangleShape getPlatformCollisionRectangle();
+
+	void movePlatformCollisionRectangle();
 
 private:
 	// true if player is standing on ground or platform
@@ -67,5 +74,7 @@ private:
 	bool isPlayerJumping = false;
 	// true is player is ascending
 	bool isPlayerRising = false;
+	// this rectangle follows the bottom of the player and it is used to detect collisions between the platforms and this rectangle
+	sf::RectangleShape platformCollisionRectangle;
 };
 

@@ -8,3 +8,7 @@ C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer E
 C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\MG Summer Exam\Debug\SFMLGAME12.pdb
 C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Debug\SFMLGAME12.exe
 C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\Bull Run\Summer-Bull-Game\Debug\SFMLGAME12.pdb
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull bull sk\Summer-Bull-Game\Debug\SFMLGAME12.exe
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull bull sk\Summer-Bull-Game\Debug\SFMLGAME12.pdb
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bll upload\Summer-Bull-Game\Debug\SFMLGAME12.exe
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bll upload\Summer-Bull-Game\Debug\SFMLGAME12.pdb

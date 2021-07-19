@@ -3,6 +3,8 @@
 #include "Player.h"
 #include "Platforms.h"
 #include <iostream>
+#include <cstdlib>  // include support for randomizing
+#include <ctime>   // supports ctime function
 
 
 class Game

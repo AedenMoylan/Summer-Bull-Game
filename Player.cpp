@@ -17,11 +17,19 @@ void Player::init()
 	m_playerSprite.setPosition(m_playerPosition);
 	
 
+	platformCollisionRectangle.setSize(sf::Vector2f(200.0f, 30.0f));
+
+	platformCollisionRectangle.setFillColor(sf::Color::Yellow);
+
+	
+
 }
 
 void Player::draw(sf::RenderWindow& window)
 {
 	window.draw(m_playerSprite);
+
+	window.draw(platformCollisionRectangle);
 }
 
 void Player::jump()
@@ -54,6 +62,7 @@ void Player::update()
 	    applyGravity();
     	m_playerSprite.setPosition(m_playerPosition);
 	}
+	movePlatformCollisionRectangle();
 }
 
 void Player::applyGravity()
@@ -91,3 +100,14 @@ bool Player::detectIfPlayerIsRising()
 	}
 	return isPlayerRising;
 }
+
+sf::RectangleShape Player::getPlatformCollisionRectangle()
+{
+	return platformCollisionRectangle;
+}
+
+void Player::movePlatformCollisionRectangle()
+{
+	platformCollisionRectangle.setPosition(getPlayerSprite().getPosition().x, getPlayerSprite().getGlobalBounds().height - 30 + getPlayerSprite().getPosition().y);
+}
+

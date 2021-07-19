@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML/Graphics.hpp>
+#include <iostream>
 
 class Platforms
 {
@@ -40,10 +41,19 @@ public:
 	/// </summary>
 	/// <returns></returns>
 	int getMaxPlatforms();
+/// <summary>
+/// returns the positions of the appropriate platforms
+/// </summary>
+	sf::Vector2f getPlatformPosition(int platformNumber);
 private:
 	// max number of platforms
-	const static int MAX_PLATFORMS = 2;
+	const static int MAX_PLATFORMS = 50;
 	// rectangle shapes for the platforms
 	sf::RectangleShape platformShapes[MAX_PLATFORMS];
+	// base value for the platform respawn number
+	const int basePlatformSpawnNumber = 150;
+	// used to determine when to respawn the platforms. value changes based on how long the player leaves the ground
+	int randomPlatformSpawn = basePlatformSpawnNumber;
+	
 };
 

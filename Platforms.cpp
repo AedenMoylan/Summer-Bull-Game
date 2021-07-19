@@ -4,13 +4,31 @@ void Platforms::init()
 {
 	for (int i = 0; i < MAX_PLATFORMS; i++)
 	{
-		platformShapes[i].setSize(sf::Vector2f(200.0f, 5.0f));
+		if (i < MAX_PLATFORMS / 2)
+		{
+			platformShapes[i].setSize(sf::Vector2f(100.0f, 5.0f));
+
+			platformShapes[i].setFillColor(sf::Color::Green);
+
+        	platformShapes[i].setPosition(500, 200);
+
 		
-		platformShapes[i].setFillColor(sf::Color::Green);
+		}
+		else if (i > MAX_PLATFORMS / 2)
+		{
+			platformShapes[i].setSize(sf::Vector2f(100.0f, 5.0f));
+
+			platformShapes[i].setFillColor(sf::Color::Red);
+
+			platformShapes[i].setPosition( 28 * i, 530);
+		}
 	}
 
-	platformShapes[0].setPosition(500, 670);
-	platformShapes[1].setPosition(200, 530);
+	platformShapes[0].setSize(sf::Vector2f(1280.0f, 5.0f));
+
+	platformShapes[0].setFillColor(sf::Color::Magenta);
+
+	platformShapes[0].setPosition(0, 650);
 		
 }
 
@@ -30,17 +48,24 @@ void Platforms::update(sf::RenderWindow& window)
 
 void Platforms::movePlatforms()
 {
-	for (int i = 0; i < MAX_PLATFORMS; i++)
+	for (int i = 1; i < MAX_PLATFORMS; i++)
 	{
-		platformShapes[1].move(-2, 0);
+		platformShapes[i].move(-2, 0);
 	}
 }
 
 void Platforms::respawnPlatforms(sf::RenderWindow& window)
 {
-	if (platformShapes[1].getPosition().x < 0)
+	for (int i = 1; i < MAX_PLATFORMS ; i++)
 	{
-		platformShapes[1].setPosition(window.getSize().x, platformShapes[1].getPosition().y);
+	int randNum = (rand() % randomPlatformSpawn) + 1;
+		if (randNum == randomPlatformSpawn)
+		{
+			if (platformShapes[i].getPosition().x < 0)
+			{
+				platformShapes[i].setPosition(window.getSize().x, platformShapes[i].getPosition().y);
+			}
+		}
 	}
 }
 
@@ -52,4 +77,10 @@ sf::RectangleShape Platforms::getPlatformSprite(int platformNumber)
 int Platforms::getMaxPlatforms()
 {
 	return MAX_PLATFORMS;
+}
+
+sf::Vector2f Platforms::getPlatformPosition(int platformNumber)
+{
+	sf::Vector2f platformPos = platformShapes[platformNumber].getPosition();
+	return platformPos;
 }

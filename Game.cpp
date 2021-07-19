@@ -7,10 +7,11 @@ static double const MS_PER_UPDATE = 10.0;
 
 void Game::init()
 {
+	srand(time(nullptr)); // set the seed once
 	myPlayer.init();
 	myPlatforms.init();
 
-	std::cout << myPlayer.getPlayerSprite().getGlobalBounds().height << std::endl;
+	
 }
 
 
@@ -77,36 +78,12 @@ void Game::update()
 	//std::cout << "Platform :" << myPlatforms.getPlatformSprite(0).getPosition().y << std::endl;
 }
 
-//void Game::detectCollisions()
-//{
-//	for (int i = 0; i < myPlatforms.getMaxPlatforms(); i++)
-//	{
-//		if (myPlayer.getPlayerSprite().getGlobalBounds().intersects(myPlatforms.getPlatformSprite(i).getGlobalBounds()))
-//		{
-//			if (myPlayer.detectIfPlayerIsRising() == false )
-//			{
-//				if(myPlayer.getPlayerSprite().getGlobalBounds().height + myPlayer.getPlayerSprite().getPosition().y + 10 >= myPlatforms.getPlatformSprite(i).getPosition().y 
-//					&& myPlayer.getPlayerSprite().getGlobalBounds().height + myPlayer.getPlayerSprite().getPosition().y - 10 <= myPlatforms.getPlatformSprite(i).getPosition().y /*||
-//					myPlayer.getPlayerSprite().getGlobalBounds().height - 5 <= myPlatforms.getPlatformSprite(i).getPosition().y*/)
-//				
-//				myPlayer.detectGround();
-//
-//
-//			}
-//				break;
-//		}
-//		else
-//		{
-//			myPlayer.playerIsNotTouchingPlatform();
-//		}
-//	}
-//}
 
 void Game::detectCollisions()
 {
 	for (int i = 0; i < myPlatforms.getMaxPlatforms(); i++)
 	{
-		sf::Vector2f platformPos = myPlatforms.getPlatformSprite(i).getPosition();
+		sf::Vector2f platformPos = myPlatforms.getPlatformPosition(i);
 		sf::Vector2f playerPos = myPlayer.getPlayerSprite().getPosition();
 
 		
@@ -115,18 +92,23 @@ void Game::detectCollisions()
 		{
 			if (playerPos.x + myPlayer.getPlayerSprite().getGlobalBounds().width >= platformPos.x && playerPos.x + myPlayer.getPlayerSprite().getGlobalBounds().width <= platformPos.x + myPlatforms.getPlatformSprite(i).getGlobalBounds().width
 				|| playerPos.x >= platformPos.x && playerPos.x <= platformPos.x + myPlatforms.getPlatformSprite(i).getGlobalBounds().width)
+
+			/*if (myPlayer.getPlatformCollisionRectangle().getGlobalBounds().intersects(myPlatforms.getPlatformSprite(i).getGlobalBounds()))*/
 			{
-				if (myPlayer.detectIfPlayerIsRising() == false)
+
+				if (myPlayer.detectIfPlayerIsRising() == false )
 				{
 					myPlayer.detectGround();
 
 				}
+
+				break;
 			}
-				else
-				{
-					myPlayer.playerIsNotTouchingPlatform();
-				}
 		}
+			else 
+			{
+ 				myPlayer.playerIsNotTouchingPlatform();
+			}
 
 
 	}
