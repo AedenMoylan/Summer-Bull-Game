@@ -45,13 +45,29 @@ public:
 /// returns the positions of the appropriate platforms
 /// </summary>
 	sf::Vector2f getPlatformPosition(int platformNumber);
+/// <summary>
+/// increases randomPlatformSpawn. used to make the platform respawn more random
+/// </summary>
+	void increasePlatformRespawnRandomizer();
+	/// <summary>
+	/// sets the platform respawn number back to it's original value
+	/// </summary>
+	void resetPlatformRespawnNumber();
+
+
+	/// <summary>
+	/// returns randomPlatformSpawn
+	/// </summary>
+	/// <returns></returns>
+	int getRandomPlatformSpawn();
+
 private:
 	// max number of platforms
 	const static int MAX_PLATFORMS = 50;
 	// rectangle shapes for the platforms
 	sf::RectangleShape platformShapes[MAX_PLATFORMS];
 	// base value for the platform respawn number
-	const int basePlatformSpawnNumber = 150;
+	const int basePlatformSpawnNumber = 400;
 	// used to determine when to respawn the platforms. value changes based on how long the player leaves the ground
 	int randomPlatformSpawn = basePlatformSpawnNumber;
 	

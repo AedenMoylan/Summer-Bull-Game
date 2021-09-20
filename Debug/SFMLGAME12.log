@@ -1,17 +1,13 @@
 ﻿  Game.cpp
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Game.cpp(10,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Game.cpp(21,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  main.cpp
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull game\Summer-Bull-Game\Game.cpp(11,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull game\Summer-Bull-Game\Game.cpp(22,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   Platforms.cpp
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Platforms.cpp(23,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Platforms.cpp(66,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull game\Summer-Bull-Game\Platforms.cpp(23,38): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull game\Summer-Bull-Game\Platforms.cpp(67,51): warning C4244: 'argument': conversion from 'T' to 'float', possible loss of data
           with
           [
               T=unsigned int
           ]
-  Player.cpp
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Player.cpp(13,36): warning C4305: 'argument': truncation from 'double' to 'float'
-C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Player.cpp(6,62): warning C4390: ';': empty controlled statement found; is this the intent?
+  main.cpp
   Generating Code...
-  LINK : C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Debug\SFMLGAME12.exe not found or not built by the last incremental link; performing full link
-  SFMLGAME12.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull run test plz\Summer-Bull-Game\Debug\SFMLGAME12.exe
+  SFMLGAME12.vcxproj -> C:\Users\C00249220\OneDrive - Institute of Technology Carlow\Desktop\bull game\Summer-Bull-Game\Debug\SFMLGAME12.exe

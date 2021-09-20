@@ -82,30 +82,29 @@ void Game::update()
 
 void Game::detectCollisions()
 {
+  sf::Vector2f playerPos = myPlayer.getPlayerSprite().getPosition();
+
 	for (int i = 0; i < myPlatforms.getMaxPlatforms(); i++)
 	{
 		sf::Vector2f platformPos = myPlatforms.getPlatformPosition(i);
-		sf::Vector2f playerPos = myPlayer.getPlayerSprite().getPosition();
 
-		
-
-		if (playerPos.y + myPlayer.getPlayerSprite().getGlobalBounds().height - 20 <= platformPos.y && playerPos.y + myPlayer.getPlayerSprite().getGlobalBounds().height + 20 >= platformPos.y )
-		{
-			if (playerPos.x + myPlayer.getPlayerSprite().getGlobalBounds().width >= platformPos.x && playerPos.x + myPlayer.getPlayerSprite().getGlobalBounds().width <= platformPos.x + myPlatforms.getPlatformSprite(i).getGlobalBounds().width
-				|| playerPos.x >= platformPos.x && playerPos.x <= platformPos.x + myPlatforms.getPlatformSprite(i).getGlobalBounds().width)
-
-			/*if (myPlayer.getPlatformCollisionRectangle().getGlobalBounds().intersects(myPlatforms.getPlatformSprite(i).getGlobalBounds()))*/
+			if (myPlayer.getPlatformCollisionRectangle().getGlobalBounds().intersects(myPlatforms.getPlatformSprite(i).getGlobalBounds()))
 			{
 
 				if (myPlayer.detectIfPlayerIsRising() == false )
 				{
 					myPlayer.detectGround();
+					
+					if (i == 0)
+					{
+						myPlatforms.resetPlatformRespawnNumber();
+					}
 
 				}
 
 				break;
 			}
-		}
+
 			else 
 			{
  				myPlayer.playerIsNotTouchingPlatform();

@@ -44,6 +44,7 @@ void Platforms::update(sf::RenderWindow& window)
 {
 	movePlatforms();
 	respawnPlatforms(window);
+	increasePlatformRespawnRandomizer();
 }
 
 void Platforms::movePlatforms()
@@ -83,4 +84,19 @@ sf::Vector2f Platforms::getPlatformPosition(int platformNumber)
 {
 	sf::Vector2f platformPos = platformShapes[platformNumber].getPosition();
 	return platformPos;
+}
+
+void Platforms::increasePlatformRespawnRandomizer()
+{
+	randomPlatformSpawn++;
+}
+
+void Platforms::resetPlatformRespawnNumber()
+{
+	randomPlatformSpawn = basePlatformSpawnNumber;
+}
+
+int Platforms::getRandomPlatformSpawn()
+{
+	return randomPlatformSpawn;
 }
