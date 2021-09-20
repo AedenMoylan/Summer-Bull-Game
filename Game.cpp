@@ -1,5 +1,6 @@
 #include "Game.h"
 
+
 sf::RenderWindow window(sf::VideoMode(1280, 720), "Bull Run");
 
 // Updates per milliseconds
