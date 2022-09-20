@@ -3,7 +3,7 @@
 
 void Player::init()
 {
-	if (!m_playerTexture.loadFromFile("ASSETS/IMAGES/Bull.png"));
+	if (!m_playerTexture.loadFromFile("ASSETS/IMAGES/sus.png"));
 	{
 	//	std::cout << "error with fileeee";
 	}
