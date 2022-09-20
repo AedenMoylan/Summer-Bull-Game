@@ -10,7 +10,7 @@ void Player::init()
 
 	m_playerSprite.setTexture(m_playerTexture);
 
-	m_playerSprite.setScale(0.15, 0.15);
+	m_playerSprite.setScale(0.5, 0.5); /// original scale 0.15, 0.15
 	m_playerSprite.setOrigin(m_playerSprite.getGlobalBounds().width / 2, m_playerSprite.getGlobalBounds().height / 2);
 	m_playerPosition = sf::Vector2f(500, 450);
 
@@ -34,11 +34,11 @@ void Player::draw(sf::RenderWindow& window)
 
 void Player::jump()
 {
-	verticalSpeed = -20;
+	verticalSpeed = -100; //original speed -20
 
 	isPlayerGrounded = false;
 
-	m_playerPosition.y = m_playerPosition.y - 10;
+	m_playerPosition.y = m_playerPosition.y - 27;   //original -10
 
 	isPlayerJumping = true;
 }
